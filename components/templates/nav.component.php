@@ -1,4 +1,6 @@
 <?php
+    require_once BASE_PATH . '/bootstrap.php';
+
     $site_name = $site_name ?? 'MineForge';
     $navbar_items = [
         'About Us' => 'about.php',
@@ -6,6 +8,12 @@
         'Contact Us' => 'contact.php',
         'Logout' => 'index.php'
     ];
+
+    $user_role = $_SESSION['user_role'] ?? 'customer';
+
+    $nav_config = require STATICDATAS_PATH . '/navConfig.staticData.php';
+    $navbar_items = $nav_config[$user_role] ?? [];
+
     $current_page = basename($_SERVER['PHP_SELF']);
     $logo_path = $logo_path ?? 'assets/img/logo.png';
     $alt_logo = $alt_logo ?? $site_name . ' logo';
