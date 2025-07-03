@@ -1,0 +1,24 @@
+{
+    "name": "lutherdev/mineforge",
+    "type": "project",
+    "authors": [
+        {
+            "name": "lutherdev",
+            "email": "devturd@gmail.com"
+        },
+        {
+            "name": "pingweiii",
+            "email": "pwchen31@gmail.com"
+        },
+        {
+            "name": "sijeeee",
+            "email": "ceejjay73@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8000 router.php"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

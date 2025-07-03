@@ -1,10 +1,12 @@
 services:
-  web-app-php:
+  mineforge:
     build:
       context: .
-    container_name: web-app-php-service
+    container_name: mineforge-service
     ports:
       - "8000:8000"
+    volumes:
+      - .:/var/www/html  
     develop:
       watch:
         - path: .
@@ -15,35 +17,19 @@ services:
         - path: ./composer.lock
           action: rebuild
     depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:latest
-    container_name: web-app-php-mongodb
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: rootPassword
-      MONGO_INITDB_DATABASE: mydatabase
-    ports:
-      - "27111:27017"
-    volumes:
-      - web-app-php-mongodb:/data/db/mongodb
+      - postgresql
 
   postgresql:
     image: postgres:15
-    container_name: web-app-php-postgresql
+    container_name: mineforge-postgresql
     restart: always
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      POSTGRES_USER: steve
+      POSTGRES_PASSWORD: stev3Miner
+      POSTGRES_DB: miningDB
     ports:
-      - "5112:5432"
-    volumes:
-      - web-app-php-postgresql:/data/db/postgresql
+      - "3333:5432"
 
 volumes:
-  web-app-php-mongodb:
-    driver: local
-  web-app-php-postgresql:
+  mineforge-postgresql:
     driver: local
