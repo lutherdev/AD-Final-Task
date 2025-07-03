@@ -5,8 +5,6 @@ services:
     container_name: mineforge-service
     ports:
       - "8000:8000"
-    volumes:
-      - .:/var/www/html  
     develop:
       watch:
         - path: .
