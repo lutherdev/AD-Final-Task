@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require_once 'bootstrap.php';
-require_once UTILS_PATH . 'envSetter.util.php';
+require_once UTILS_PATH . '/envSetter.util.php';
 
 $pgConfig = [
 'host' => $dbConfig['pgHost'],
