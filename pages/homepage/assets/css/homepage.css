@@ -1,5 +1,6 @@
 .homepage-container {
-    background-color: #1a1a1a;
+    background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
+    url('/pages/homepage/assets/img/productbg.jpg');
     color: #f0e6d2;
     overflow-x: hidden;
 }
@@ -45,8 +46,21 @@
     line-height: 1.8;
     margin-bottom: 2rem;
 }
+
+@keyframes hammerPulse {
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);}
+}
+
+.intro-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 3px rgba(139, 0, 0, 0.7));
+    animation: hammerPulse 2s infinite;
+}
+
+
 .content-wrapper {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
