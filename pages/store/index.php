@@ -1,3 +1,43 @@
+<?php
+$products = [
+    [
+        'name' => 'Pickaxe',
+        'price' => 200,
+        'description' => 'Essential for mining stone and ore.',
+        'category' => 'Tools',
+        'image' => '/pages/store/assets/img/pickaxe.png'
+    ],
+    [
+        'name' => 'Gold Nugget',
+        'price' => 120,
+        'description' => 'Precious gold used for trading and decorations.',
+        'category' => 'Ore',
+        'image' => '/pages/store/assets/img/pickaxe.png'
+    ],
+    [
+        'name' => 'Iron Pickaxe',
+        'price' => 200,
+        'description' => 'Raw metal for crafting tools and armor.',
+        'category' => 'Tools',
+        'image' => '/pages/store/assets/img/pickaxe.png'
+    ],
+    [
+        'name' => 'Head Lamp',
+        'price' => 90,
+        'description' => 'Keep your tunnels lit and safe.',
+        'category' => 'Gear',
+        'image' => '/pages/store/assets/img/pickaxe.png'
+    ],
+    [
+        'name' => 'Miner\'s Helmet',
+        'price' => 150,
+        'description' => 'Protects your head from falling rocks.',
+        'category' => 'Gear',
+        'image' => '/pages/store/assets/img/pickaxe.png'
+    ],
+];
+?>
+
 <section class="store-container" id="inventory">
     <div class="store-header">
       <h1>Miner's Inventory</h1>
@@ -9,19 +49,17 @@
     </div>
 
     <div class="store-main">
-      <!-- sidebar wrapper -->
       <div class="sidebar">
         <aside class="cart-box">
           <h2>Cart</h2>
-          <ul>
-            <li>Pickaxe<span>₱200</span></li>
-            <li>Head Lamp<span>₱90</span></li>
+          <ul id="cart-items">
+
           </ul>
-          <div class="total">Total: ₱290</div>
+          <div class="total">Total: ₱<span id="cart-total">0</span></div>
         </aside>
 
         <aside class="cart-box2">
-          <h2>Cart2</h2>
+          <h2>SAMPLE BOX</h2>
           <ul>
             <li>Miner's Helmet<span>₱150</span></li>
             <li>Gold Nugget<span>₱120</span></li>
@@ -31,65 +69,66 @@
       </div>
 
       <div class="products-grid">
+    <?php foreach ($products as $product): ?>
         <div class="product-card">
-          <img src="/pages/store/assets/img/pickaxe.png" alt="Iron Ore">
-          <div class="product-info">
-            <h3>Iron Ore</h3>
-            <p>Raw metal for crafting tools and armor.</p>
-            <div class="price-action">
-              <span class="price">₱50</span>
-              <button>Add to Cart</button>
+            <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
+            <div class="product-info">
+                <h3><?= $product['name'] ?></h3>
+                <p><?= $product['description'] ?></p>
+                <div class="price-action">
+                    <span class="price">₱<?= $product['price'] ?></span>
+                    <button onclick="addToCart('<?= $product['name'] ?>', <?= $product['price'] ?>, '<?= $product['category'] ?>')">Add to Cart</button>
+                </div>
             </div>
-          </div>
         </div>
+    <?php endforeach; ?>
+</div>
 
-        <div class="product-card">
-          <img src="/pages/store/assets/img/pickaxe.png" alt="Gold Nugget">
-          <div class="product-info">
-            <h3>Gold Nugget</h3>
-            <p>Precious gold used for trading and decorations.</p>
-            <div class="price-action">
-              <span class="price">₱120</span>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="/pages/store/assets/img/pickaxe.png" alt="Iron Pickaxe">
-          <div class="product-info">
-            <h3>Iron Pickaxe</h3>
-            <p>Essential for mining stone and ore.</p>
-            <div class="price-action">
-              <span class="price">₱200</span>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="/pages/store/assets/img/pickaxe.png" alt="Head Lamp">
-          <div class="product-info">
-            <h3>Head Lamp</h3>
-            <p>Keep your tunnels lit and safe.</p>
-            <div class="price-action">
-              <span class="price">₱90</span>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="/pages/store/assets/img/pickaxe.png" alt="Miner's Helmet">
-          <div class="product-info">
-            <h3>Miner's Helmet</h3>
-            <p>Protects your head from falling rocks.</p>
-            <div class="price-action">
-              <span class="price">₱150</span>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
+
+   <script>
+        let cart = [];
+
+function showOrderSummary() {
+    const cartBox = document.querySelector('.cart-box');
+    cartBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+function addToCart(item, price, category = "default") {
+    let itemExists = false;
+
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === item && cart[i].category === category) {
+            cart[i].quantity++;
+            itemExists = true;
+            break;
+        }
+    }
+
+    if (!itemExists) {
+        cart.push({ name: item, price: price, quantity: 1, category: category });
+    }
+
+    updateCart();
+    showOrderSummary(); // Optional: scroll to summary if needed
+}
+
+function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    cartItems.innerHTML = ''; // Clear old list
+
+    let total = 0;
+
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        const subtotal = item.price * item.quantity;
+        li.innerHTML = `${item.name} x${item.quantity} <span>₱${subtotal}</span>`;
+        cartItems.appendChild(li);
+        total += subtotal;
+    });
+
+    cartTotal.textContent = total;
+}
+
+    </script>
