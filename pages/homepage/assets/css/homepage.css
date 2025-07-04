@@ -1,0 +1,32 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 1.5rem;
+    background: rgba(43, 21, 21,0.9);
+    border: 1px solid #D4Af37;
+    border-radius: 5px;
+    transition: 0.3 ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    color: #D4Af37;
+    margin-top: 0;
+}
+
+.product-card p {
+    color: #f0e6d2;
+}
