@@ -10,6 +10,7 @@ define('ERRORS_PATH', BASE_PATH . '/errors');
 define('DOCS_PATH', BASE_PATH . '/docs');
 define('DATABASE_PATH', BASE_PATH . '/database');
 define('COMPONENTS_PATH', BASE_PATH . '/components');
+define('TEMPLATES_PATH', COMPONENTS_PATH . '/templates');
 define('ASSETS_PATH', BASE_PATH . '/assets');
 
 chdir(BASE_PATH);
