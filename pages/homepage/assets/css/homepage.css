@@ -9,6 +9,14 @@
     margin-left: calc(-50vw + 50%);
 }
 
+.intro-container {
+    background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
+    url('/pages/homepage/assets/img/parchment-bg.jpg');
+    padding: 4rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
