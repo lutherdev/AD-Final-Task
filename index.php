@@ -6,7 +6,7 @@ $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), "/");
 
 // Default page
 if ($uri === "") {
-    $folder = "home";
+    $folder = "homepage";
 } else {
     $folder = $uri;
 }
