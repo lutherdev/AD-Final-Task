@@ -1,3 +1,19 @@
+.homepage-container {
+    background-color: #1a1a1a;
+    color: #f0e6d2;
+    overflow-x: hidden;
+}
+
+.carousel-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 .product-grid {
     display: flex;
     flex-wrap: wrap;
