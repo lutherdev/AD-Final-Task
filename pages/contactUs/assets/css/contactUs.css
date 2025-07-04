@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f3dfc4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contactus-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LOCATION: unchanged */
+.location {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8e7d2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.location h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.location iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-info .label {
+  font-weight: bold;
+}
+
+.comment {
+  flex: 1;
+  padding: 40px 20px;
+  background-image: url('../img/scroll.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comment h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.box-name,
+.box-email,
+.box-message {
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  height: 150px;
+}
+
+.box-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.box-button button {
+  background-color: #c8924d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
