@@ -2,15 +2,18 @@
 $carousel_items = [
   [
     'src' => 'carousel1.jpg',
-    'alt' => 'MineForge Excavation',
-    'caption' => 'Quality Minerals Since 1357 DR'
+    'alt' => 'Kingdom of WyrmForge',
   ],
   [
     'src' => 'carousel2.jpg',
-    'alt' => 'Our Mining Team',
-    'caption' => 'Expert Miners & Craftsmen'
+    'alt' => 'Lower Cities',
+  ],
+  [
+    'src' => 'carousel3.jpg',
+    'alt' => "MineForge's Hall",
   ]
 ];
+
 
 $products = [
   [
