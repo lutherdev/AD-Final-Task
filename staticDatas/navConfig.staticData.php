@@ -6,7 +6,7 @@ return [
     'customer' => [
         'Home' => '/',
         'About Us' => 'aboutUs',
-        'Shop' => 'shop',
+        'Store' => 'store',
         'Contact Us' => 'contactUs',
         'Logout' => 'logout'
     ],
