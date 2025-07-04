@@ -2,9 +2,7 @@
 require_once 'bootstrap.php';
 $team_members = require STATICDATAS_PATH . '/dummies/aboutUs.staticData.php'; 
 
-$aboutUscss ='/pages/aboutUs/assets/css/aboutus.css';
 ?>
-<link rel="stylesheet" href=" <?= htmlspecialchars($aboutUscss) ?>">
 
 <main class="aboutus-container">
     <section class="about-story">
