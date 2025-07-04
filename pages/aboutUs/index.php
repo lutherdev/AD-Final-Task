@@ -1,8 +1,11 @@
 <?php
 require_once 'bootstrap.php';
-$team_members = require 'STATICDATAS_PATH' . '/dummies/aboutUs.staticData.php'; 
+$team_members = require STATICDATAS_PATH . '/dummies/aboutUs.staticData.php'; 
 
+$aboutUscss ='/pages/aboutUs/assets/css/aboutus.css';
 ?>
+<link rel="stylesheet" href=" <?= htmlspecialchars($aboutUscss) ?>">
+
 <main class="aboutus-container">
     <section class="about-story">
         <h1>MineForge - Delvers of the Underdark</h1>
@@ -14,6 +17,17 @@ $team_members = require 'STATICDATAS_PATH' . '/dummies/aboutUs.staticData.php';
     </section>
     <section class="about-team">
         <h2>Our Team</h2>
+        <div class="team-grid">
+            <?php foreach ($team_members as $member) : ?>
+                <div class="team-card">
+                    <img src="<?= htmlspecialchars($member['image']) ?>"
+                         alt="<?= htmlspecialchars($member['name']) ?>"
+                         class="team-photo">
+                    <h3><?= htmlspecialchars($member['name']) ?></h3>
+                    <p><?= htmlspecialchars($member['role']) ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
         </div>
     </section>
 </main>
