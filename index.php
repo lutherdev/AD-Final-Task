@@ -12,6 +12,7 @@ if ($uri === "") {
 }
 
 $pageFile = PAGES_PATH . "/{$folder}/index.php";
+$pageCssPath = "pages/{$folder}/assets/css/{$folder}.css";
 $title = ucfirst($folder);
 
 renderMainLayout(function () use ($pageFile) {
@@ -20,4 +21,4 @@ renderMainLayout(function () use ($pageFile) {
     } else {
         echo "<h1>404 - Page Not Found</h1>";
     }
-}, $title);
+}, $title, $pageCssPath);

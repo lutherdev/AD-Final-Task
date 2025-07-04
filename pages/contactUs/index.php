@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="pages/contactUs/assets/css/contactUs.css">
+
 <main class="contactus-container">
 
     <div class="location">
