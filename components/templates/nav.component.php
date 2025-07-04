@@ -6,6 +6,7 @@
     $user_role = $_SESSION['user_role'] ?? 'customer';
 
     $nav_config = require STATICDATAS_PATH . '/navConfig.staticData.php';
+    
     $navbar_items = $nav_config[$user_role] ?? [];
 
     $current_page = basename($_SERVER['PHP_SELF']);
@@ -16,7 +17,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="home.php">
+                <a href="/">
                 <img src ="<?php echo htmlspecialchars($logo); ?>"
                      alt ="<?php echo htmlspecialchars($alt_logo); ?>"
                      class="logo-img">
