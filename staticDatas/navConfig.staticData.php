@@ -4,7 +4,7 @@ require_once BASE_PATH . '/bootstrap.php';
 
 return [
     'customer' => [
-        'Home' => '',
+        'Home' => '/',
         'About Us' => 'aboutUs',
         'Shop' => 'shop',
         'Contact Us' => 'contactUs',
