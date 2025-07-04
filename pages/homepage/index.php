@@ -1,12 +1,12 @@
 <?php
 $carousel_items = [
   [
-    'src' => '/assets/img/carousel1.jpg',
+    'src' => 'carousel1.jpg',
     'alt' => 'MineForge Excavation',
     'caption' => 'Quality Minerals Since 1357 DR'
   ],
   [
-    'src' => '/assets/img/carousel2.jpg',
+    'src' => 'carousel2.jpg',
     'alt' => 'Our Mining Team',
     'caption' => 'Expert Miners & Craftsmen'
   ]
@@ -22,23 +22,26 @@ $products = [
     'desc' => 'Purest in the Sword Coast'
   ]
 ];
+
+$homePageCss = '/pages/homepage/assets/css/homepage.css';
+$carouselCss = '/pages/homepage/assets/css/carousel.css';
 ?>
 
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/pages/homepage/assets/css/carousel.css">
+<link rel="stylesheet" href="<?= htmlspecialchars($homePageCss) ?>">
+<link rel="stylesheet" href="<?= htmlspecialchars($carouselCss) ?>">
 
-<section class="carousel">
-  <div id="mineCarousel" class="carousel slide" data-bs-ride="carousel">
+<section class="carousel-container">
+  <div id="mineCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
       <?php foreach ($carousel_items as $i => $item): ?>
         <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>">
+          <div class="image-container">
           <img src="/pages/homepage/assets/img/<?= htmlspecialchars($item['src']) ?>"
                class="d-block w-100"
                alt="<?= htmlspecialchars($item['alt']) ?>">
-          <div class="carousel-caption">
-            <h2><?= htmlspecialchars($item['caption']) ?></h2>
-          </div>
+            </div>
       </div>
       <?php endforeach; ?>
     </div>
