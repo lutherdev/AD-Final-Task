@@ -2,12 +2,6 @@
     require_once BASE_PATH . '/bootstrap.php';
 
     $site_name = $site_name ?? 'MineForge';
-    $navbar_items = [
-        'About Us' => 'about.php',
-        'Shop' => 'shop.php',
-        'Contact Us' => 'contact.php',
-        'Logout' => 'index.php'
-    ];
 
     $user_role = $_SESSION['user_role'] ?? 'customer';
 

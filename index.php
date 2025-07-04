@@ -13,7 +13,7 @@ require_once BASE_PATH . '/bootstrap.php';
 <body>
     <?php 
     require_once 'components/templates/nav.component.php';
-    include_once HANDLERS_PATH . "/postgreTester.handler.php";
+    include_once PAGES_PATH . "/contactUs/index.php"
 ?>
 </body>
 </html>
