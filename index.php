@@ -1,19 +1,23 @@
 <?php
-require_once BASE_PATH . '/bootstrap.php';
-?>
+require_once "layouts/main.layout.php";
+require_once "bootstrap.php";
+// Get the URI path
+$uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), "/");
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/nav.component.css">
-</head>
-<body>
-    <?php 
-    require_once 'components/templates/nav.component.php';
-    include_once PAGES_PATH . "/contactUs/index.php"
-?>
-</body>
-</html>
+// Default page
+if ($uri === "") {
+    $folder = "contactUs";
+} else {
+    $folder = $uri;
+}
+
+$pageFile = PAGES_PATH . "/{$folder}/index.php";
+$title = ucfirst($folder);
+
+renderMainLayout(function () use ($pageFile) {
+    if (file_exists($pageFile)) {
+        require $pageFile;
+    } else {
+        echo "<h1>404 - Page Not Found</h1>";
+    }
+}, $title);
