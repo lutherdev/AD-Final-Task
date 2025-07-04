@@ -25,5 +25,5 @@ function renderMainLayout(callable $content, string $title, string $pageCss = ""
     //navHeader($headNavList, $user);
     require_once COMPONENTS_PATH . '/templates/nav.component.php';
     $content();
-    footer();
+    //footer();
 }
