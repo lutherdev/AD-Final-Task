@@ -1,9 +1,13 @@
 <?php
+
+require_once BASE_PATH . '/bootstrap.php';
+
 return [
     'customer' => [
         'Home' => 'home.php',
+        'About Us' => PAGES_PATH . '/aboutUs/index.php',
         'Shop' => 'shop.php',
-        'Contact Us' => 'contact.php',
+        'Contact Us' => PAGES_PATH . '/contactUs/index.php',
         'Logout' => 'logout.php'
     ],
     'admin' => [
