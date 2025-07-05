@@ -177,13 +177,6 @@ body {
     padding: 0 1rem;
 }
 
-.about-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
 .about-service {
     padding: 2rem;
     background: linear-gradient(rgba(64, 28, 28, 0.9), rgba(41, 29, 29, 0.818))
@@ -194,29 +187,90 @@ body {
 .about-service p {
     max-width: 800px;
 }
+.about-team {
+    background: linear-gradient(rgba(20,10,10,0.9), rgba(40,20,20,0.9));
+    padding: 3rem 1rem;
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
+}
 
-.team-grid {
+.team-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.team-title {
+    font-family: 'MedievalSharp', cursive;
+    color: #d4af37;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.pickaxe-divider {
+    color: #d4af37;
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+    margin: 1rem 0;
+}
+
+.miner-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 1rem;
 }
 
-.team-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.miner-card {
+    flex: 0 1 calc(33.333% - 2rem);
+    text-align: center;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid brown;
-    min-width: 200px;
+    border: 1px solid rgba(92,58,33,0.5);
+    transition: all 0.3 ease;
+    min-width: 220px;
+    background-color: rgba(30, 15, 15, 0.5);
 }
 
-.team-photo {
+.miner-portrait {
+    position: relative;
     width: 120px;
     height: 120px;
-    border-radius: 20%;
+    margin: 0 auto 1.5rem;
+}
+
+.miner-photo {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 1px solid pink;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    filter: sepia(30%) brightness(90%) contrast(110%);
+}
+
+.miner-name {
+    color: #f0e6d2;
+    font-family: 'MedievalSharp',cursive;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.miner-role {
+    color: #c0a88a;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.miner-card {
+    transform: translateY(-5px);
+    background: rgba(43,21,21,0.8);
+    box-shadow: 0 5px 15px rgba(212,175,55,0.2);
+}
+
+.miner-card :hover .miner-name,
+.miner-card :hover .miner-role {
+    color: #d4af37;
 }
