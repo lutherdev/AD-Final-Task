@@ -7,9 +7,48 @@
     padding: 2rem;
 }
 
+.about-hero {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(11,6,6,0.7), rgba(30,15,15,0.7)), url(/pages/aboutUs/assets/img/underdark.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+}
+
 .story-header {
     text-align: center;
     margin-bottom: 2rem;
+    background: rgba(43,21,21, 0.8);
+    padding: 2rem;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .story-header h1 {
@@ -41,7 +80,13 @@
     padding-bottom: 0.5rem;
 }
 
-.about-story,
+.about-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: -1rem;
+}
 .about-service,
 .about-team {
     display: flex;
