@@ -2,7 +2,7 @@
   <div class="login-box">
     <h2>Login</h2>
 
-    <form action="utils/authhandler.util.php" method="POST">
+    <form action="handlers/auth.handler.php" method="POST">
       <label>Username: </label>
       <input type="text" name="username" required>
 
