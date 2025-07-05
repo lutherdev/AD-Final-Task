@@ -17,9 +17,13 @@
 
     <div class="comment">
         <h1>Send a Raven</h1>
-        <form onsubmit="return false;">
+        <form action="/handlers/contact.handler.php" method="POST">
             <div class="box-name">
                 <input type="text" name="name" placeholder="Enter thy Name" required>
+            </div>
+
+            <div class="box-name">
+                <input type="text" name="username" placeholder="Enter thy username" required>
             </div>
 
             <div class="box-email">
