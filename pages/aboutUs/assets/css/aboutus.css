@@ -1,10 +1,16 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .aboutus-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 1200px;
+    gap: 0;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .about-hero {
@@ -16,7 +22,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 2rem;
 }
 
 .hero-background {
@@ -80,13 +85,45 @@
     padding-bottom: 0.5rem;
 }
 
-.about-story {
+.parch-container {
+    background: url('/pages/aboutUs/assets/img/parchment-bg.jpg') center/cover;
+    padding: 3rem 0;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 100vw;
+    border-radius: 2px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin-top: -1rem;
+    justify-content: center;
 }
+
+.parch-container p {
+    color: #4a3728;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+    max-width: 1200px;
+    width: 90%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.parch-container p::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(74,55,49,0.2);
+}
+.about-story {
+    width: 100vw;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    margin-top: -2rem;
+}
+
 .about-service,
 .about-team {
     display: flex;
