@@ -8,7 +8,7 @@ return [
         'About Us' => 'aboutUs',
         'Store' => 'store',
         'Contact Us' => 'contactUs',
-        'Logout' => 'logout'
+        'Login' => 'login'
     ],
     'admin' => [
         'Dashboard' => 'dashboard',
