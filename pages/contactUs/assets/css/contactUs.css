@@ -24,8 +24,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border: 5px solid #5a3e1a;
-  border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   min-height: 600px;
   display: flex;
