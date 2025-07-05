@@ -117,3 +117,8 @@ textarea {
   transform: scale(1.05);
   box-shadow: 0 0 18px rgba(255, 160, 80, 0.8);
 }
+
+.input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 160, 80, 0.8);
+}
