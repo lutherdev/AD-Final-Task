@@ -86,24 +86,22 @@ body {
 }
 
 .parch-container {
-    background: url('/pages/aboutUs/assets/img/parchment-bg.jpg') center/cover;
-    padding: 3rem 0;
+    max-width: 800px;
     margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    width: 100vw;
-    border-radius: 2px;
-    display: flex;
-    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
 }
 
 .parch-container p {
     color: #4a3728;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.8;
     text-align: justify;
+    font-family: 'Book Antiqua', serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     max-width: 1200px;
     width: 90%;
-    padding: 0 2rem;
+    padding: 1.5rem;
     margin: 0 auto;
     position: relative;
 }
@@ -117,11 +115,24 @@ body {
     height: 1px;
     background: rgba(74,55,49,0.2);
 }
+
+.parch-container p::first-letter {
+    font-family: 'Book Antiqua', serif;
+    font-size: 3.5rem;
+    float: left;
+    line-height: 0.5;
+    
+}
 .about-story {
     width: 100vw;
-    padding: 2rem 0;
-    margin: 2rem 0;
-    margin-top: -2rem;
+    margin-left: calc(-50vw + 50%);
+    padding: 4rem 0;
+    background: #f3e9d2 url('/pages/aboutUs/assets/img/parchment-bg.jpg') center/cover;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
 }
 
 .about-service,
