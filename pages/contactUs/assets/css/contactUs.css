@@ -13,7 +13,6 @@ body {
 .contactus-container {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -26,13 +25,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: 5px solid #5a3e1a;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px;
+  padding: 70px;
 }
 
 .location h1, .comment h1 {
@@ -47,18 +46,9 @@ body {
 .medieval-map img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  border: 2px dashed #7e5d3c;
   margin-bottom: 10px;
 }
 
-.map-hint {
-  text-align: center;
-  font-size: 12px;
-  font-style: italic;
-  color: #6c4e2c;
-  margin-top: -10px;
-}
 
 .contact-info p {
   margin: 8px 0;
@@ -82,12 +72,19 @@ input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 12px;
   border-radius: 5px;
-  border: 1px solid #a9825c;
+  border: 1px solid #36210c;
   font-size: 14px;
-  background-color: #fcf5e8;
+  background-color: #927641;
   color: #2d1b00;
   font-family: 'MedievalSharp', cursive;
 }
+
+.comment input::placeholder,
+.comment textarea::placeholder {
+    color: #000000; /* Change to your desired color */
+    opacity: 1;     /* Optional: Ensures full visibility */
+}
+
 
 textarea {
   height: 150px;
