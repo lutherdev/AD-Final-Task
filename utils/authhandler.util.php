@@ -40,9 +40,6 @@ try {
         if ($username == $defaultAccs[0]['username']){
             if ($password == $defaultAccs[0]['password']){
                 $_SESSION['user'] = $defaultAccs[0];
-
-                echo "login success";
-                echo "welcome : " . $_SESSION['user']['username'];
                 header("Location: /"); //passes this location to the routing control which is router.php then processes the "/"
                 exit;
             } else {
