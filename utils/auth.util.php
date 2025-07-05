@@ -5,18 +5,15 @@ class Auth{
 {
     if (session_status() === PHP_SESSION_NONE) { //IF SESSION IS NONE : LIKE NO STARTED SESSION THEN =
         session_start(); // START THE SESSION NOW!
-        $_SESSION['user'] = [ //HARD CODED ACCOUNT
-            'id' => 1,
-            'username' => 'notched',
-            'password' => 'notched',
-            'first_name' => 'Notch',
-            'last_name' => 'Ford',
-            'role' => 'admin',
-            'wallet' => 999999
-        ];
+    } 
+
+    if (isset($_SESSION['user'])) {
         echo "You are now logged in as " . $_SESSION['user']['first_name'] . '<br>';
+        echo "Your role is : " . $_SESSION['user']['role'] . '<br>';
         echo 'Your money is : ' . $_SESSION['user']['wallet'];
-    }
+    } else {
+        echo "No user is logged in.";
+}
 }
 
 }
