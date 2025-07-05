@@ -29,22 +29,26 @@ $team_members = require STATICDATAS_PATH . '/dummies/aboutUs.staticData.php';
         <div class="ore-divider"></div>
         <p class="forge-text">MineForge specializes in ethically sourced metals and minerals, supplying Baldur's Gate's finest smiths and builders. Our high-grade iron and steel form the backbone of the city's weapons and structures, while carefully selected gemstones—some with intriguing natural properties—are prized by jewelers and arcanists alike. Using time-honored techniques blending dwarven precision with human innovation, we extract quality stone for the city's growing architecture, though some of our deeper operations require... particularly specialized expertise.
         </p>
-        <div class="mining-pick"></div>
         </div>
     </section>
-    <section class="about-team">
-        <h2>Our Team</h2>
-        <div class="team-grid">
-            <?php foreach ($team_members as $member) : ?>
-                <div class="team-card">
-                    <img src="<?= htmlspecialchars($member['image']) ?>"
-                         alt="<?= htmlspecialchars($member['name']) ?>"
-                         class="team-photo">
-                    <h3><?= htmlspecialchars($member['name']) ?></h3>
-                    <p><?= htmlspecialchars($member['role']) ?></p>
+<section class="about-team">
+    <div class="team-header">
+        <h2 class="team-title">DELVERS OF THE DEEP</h2>
+        <div class="pickaxe-divider">⚒⚒⚒</div>
+    </div>
+    <div class="miner-grid">
+        <?php foreach ($team_members as $member) : ?>
+            <div class="miner-card">
+                <div class="miner-portrait">
+                    <img src="<?= htmlspecialchars($member['image']) ?>" 
+                         alt="<?= htmlspecialchars($member['name']) ?>" 
+                         class="miner-photo">
+                    <div class="miner-frame"></div>
                 </div>
-            <?php endforeach; ?>
-        </div>
-        </div>
-    </section>
+                <h3 class="miner-name"><?= htmlspecialchars($member['name']) ?></h3>
+                <p class="miner-role"><?= htmlspecialchars($member['role']) ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 </main>
