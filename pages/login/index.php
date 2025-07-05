@@ -1,3 +1,7 @@
+<?php
+$error = $_GET['error'] ?? '';
+?>
+
 <div class="login-container">
   <div class="login-box">
     <h2>Login</h2>
