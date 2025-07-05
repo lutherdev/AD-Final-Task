@@ -2,11 +2,13 @@
 
 $defaultAccs = [
     [
+        'id' => 1,
         'username' => 'Notch',
         'password' => 'mine123',
-        'wallet' => 999999,
         'first_name' => 'Notch',
-        'last_name' => 'god'
+        'last_name' => 'Ford',
+        'role' => 'admin',
+        'wallet' => 999999
     ],
     [
         'username' => 'Steve',
