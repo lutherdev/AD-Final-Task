@@ -4,7 +4,7 @@
         <h1>Location of the Minekeeper</h1>
 
         <div class="medieval-map">
-                <img src="/pages/contactUs/assets/img/mappp.png" alt="Mine Location Map">
+                <img src="/pages/contact-us/assets/img/mappp.png" alt="Mine Location Map">
             </a>
         </div>
 
