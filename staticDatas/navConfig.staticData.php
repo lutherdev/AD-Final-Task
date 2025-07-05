@@ -22,7 +22,11 @@ if (isset($_SESSION['user'])) {
             'About Us' => 'about-us',
             'Store' => 'store',
             'Contact Us' => 'contact-us',
-            'Manage Items' => 'manageUsers',
+            'Manage' => [
+                'Add Item' => 'add-items',
+                'Edit Item' => 'edit-items',
+                'Remove Item' => 'remove-items'
+            ],
             'Logout' => 'handlers/logout.handler.php'
         ]
         ];
