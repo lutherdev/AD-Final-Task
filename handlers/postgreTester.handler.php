@@ -37,5 +37,19 @@ foreach ($users as $user) {
     echo "---------------------------\n";
 }
 
+$stmt = $pdo->query("SELECT * FROM users_messages");
+
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($users as $user) {
+    echo "---------------------------<br>";
+    echo "User ID: " . $user['id'] . "<br>";
+    echo "Username: " . $user['username'] . "<br>";
+    echo "First Name: " . $user['name'] . "<br>";
+    echo "Last Name: " . $user['email'] . "<br>";
+    echo "Role: " . $user['message'] . "<br>";
+    echo "---------------------------<br>";
+}
+
     pg_close($dbconn);
 }
