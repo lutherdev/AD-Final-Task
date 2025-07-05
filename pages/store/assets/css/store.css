@@ -80,6 +80,7 @@ body {
   padding: 0;
   border: none;
   box-shadow: none;
+  overflow-y: scroll;
 }
 
 .cart-box h2,
@@ -88,19 +89,21 @@ body {
   font-size: 1.4rem;
   margin-bottom: 15px;
   color: #5a4231;
-  overflow-y: scroll;
 }
 
 .cart-box::-webkit-scrollbar {
   width: 13px;
 }
 
-.cart-box::-webkit-scrollbar-thumb {
-  background-color: #463925;
-  border-radius: 100px;
+.cart-box::-webkit-scrollbar-track {
+  background-color: #38301d;
 }
 
-.cart-box::-webkit-scrollbar-track {
+.cart-box2::-webkit-scrollbar {
+  width: 13px;
+}
+
+.cart-box2::-webkit-scrollbar-track {
   background-color: #38301d;
 }
 
@@ -175,19 +178,20 @@ body {
 
 .product-info {
   padding: 15px;
-  background: #f9f4e8;
-  border-top: 1px solid #e5cfa5;
+  background: url(/pages/store/assets/img/productinfoBG.png);
 }
 
 .product-info h3 {
   font-size: 1.1rem;
   margin-bottom: 5px;
+  color: black;
 }
 
 .product-info p {
   font-size: 0.9rem;
   margin: 4px 0;
   min-height: 40px;
+  color: black;
 }
 
 .price-action {
@@ -199,14 +203,14 @@ body {
 
 .price {
   font-size: 1rem;
-  color: #3a9c36;
+  color: #1c4e1b;
   font-weight: bold;
 }
 
 .price-action button {
-  background: #b0843f;
+  background: #5f4926;
   border: none;
-  color: white;
+  color: black;
   padding: 8px 12px;
   border-radius: 5px;
   font-weight: bold;
@@ -215,5 +219,5 @@ body {
 }
 
 .price-action button:hover {
-  background: #5a4231;
+  background: #a3551e;
 }
