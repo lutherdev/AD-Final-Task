@@ -35,6 +35,12 @@
     letter-spacing: 2px;
     line-height: 1.3;
 }
+
+.mineforge-banner span:first-child {
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 0.5rem;
+}
+
 .about-story,
 .about-service,
 .about-team {
