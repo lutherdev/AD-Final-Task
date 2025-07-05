@@ -7,6 +7,8 @@ class Auth{
         session_start(); // START THE SESSION NOW!
         $_SESSION['user'] = [ //HARD CODED ACCOUNT
             'id' => 1,
+            'username' => 'notched',
+            'password' => 'notched',
             'first_name' => 'Notch',
             'last_name' => 'Ford',
             'email' => 'NotyourEmail@gmail.com',
