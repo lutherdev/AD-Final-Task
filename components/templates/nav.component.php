@@ -12,13 +12,15 @@
     $alt_logo = $alt_logo ?? $site_name . ' logo';
 ?>
 
+
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="/">
+                <a href="homepage">
                 <img src ="<?php echo htmlspecialchars($logo); ?>"
                      alt ="<?php echo htmlspecialchars($alt_logo); ?>"
                      class="logo-img">
+                     <span class="logo-text">MineForge</span>
                 </a>
             </div>
 
@@ -27,6 +29,7 @@
                     <?php if (is_array($url)): ?>
                         <div class="navbar-item dropdown">
                             <span class="dropdown-title"><?php echo htmlspecialchars($title); ?></span>
+                            
                             <div class="dropdown-content">
                                 <?php foreach ($url as $subTitle => $subUrl): ?>
                                     <a href="<?php echo htmlspecialchars($subUrl); ?>"><?php echo htmlspecialchars($subTitle); ?></a>
@@ -36,6 +39,7 @@
                     <?php else: ?>
                         <a href="<?php echo htmlspecialchars($url); ?>"
                         class="navbar-item <?php echo ($current_page === $url) ? 'is-active' : ''; ?>">
+
                         <?php echo htmlspecialchars($title); ?>
                         </a>
                     <?php endif; ?>
@@ -43,3 +47,5 @@
             </div>
          </div>
     </nav>
+    
+        <script src="../assets/js/nav.js" defer></script>
