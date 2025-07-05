@@ -7,11 +7,11 @@ return [
 ],
     ['name' => 'Ping Wei',
     'role' => 'Gold Digger',
-    'image' => '/img/member2.jpg',
+    'image' => '/pages/aboutUs/assets/img/member2.jpg',
 ],
     ['name' => 'Christian Molina',
     'role' => 'Noob Digger',
-    'image' => '/img/member3.jpg',
+    'image' => '/pages/aboutUs/assets/img/member3.jpg',
 ],
 
 ];
