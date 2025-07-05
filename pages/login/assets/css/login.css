@@ -10,9 +10,81 @@
 }
 
 .parchment-login {
-  background: linear-gradient(rgba(242,227,197,0.9), rgba(242,227,197,0.9));
+  background: linear-gradient(rgba(242,227,197,0.9), rgba(242,227,197,0.9)),
+  url('../img/parchment-bg.jpg') center/cover;
+  padding: 3rem;
+  border-radius: 5px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
 }
 
+.login-title {
+  font-family: 'MedievalSharp', cursive;
+  color: #5c3a21;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-divider {
+  color: #5c3a21;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1rem;
+  margin: 1rem 0 2rem;
+  opacity: 0.7;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #5c3a21;
+  font-family: 'MedievalSharp', cursive;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255,253,240,0.7);
+  border: 1px solid #c0a88a;
+  border-radius: 3px;
+  font-family: 'Book Antiqua', serif;
+  color: #4a3728;
+  transition: all 0.3 ease;
+}
+
+.form-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 5px rgba(212,175,55,0.5);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #d4af37;
+  color: #3a2a0e;
+  border: none;
+ border-radius: 3px;
+ font-family: 'MedievalSharp', cursive;
+ font-size: 1.2rem;
+ cursor: pointer;
+ transition: all 0.3 ease;
+ margin-top: 1rem;
+ box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.login-btn:hover {
+  background: #c19b2e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 .login-box {
       background-color: rgb(255, 255, 255);
       border-radius: 10px;
@@ -43,7 +115,7 @@
       padding: 10px;
       margin-top: 6px;
       border: none;
-      border-bottom: 2px solid #aaa;
+      border-bottom: 2px solid #4a3728;
       background-color: transparent;
       outline: none;
       font-size: 16px;
@@ -52,7 +124,7 @@
 
     input[type="text"]:focus,
     input[type="password"]:focus {
-      border-bottom-color: #007bff;
+      border-bottom-color: #d4af37;
     }
 
     .login-box button {
