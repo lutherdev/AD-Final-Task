@@ -2,15 +2,20 @@
 
 require_once BASE_PATH . '/bootstrap.php';
 
-if (login){
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['user'])) {
+    $role = $_SESSION['user']['role'] ?? 'customer'; 
+
     return [
         'customer' => [
             'Home' => '/',
             'About Us' => 'aboutUs',
             'Store' => 'store',
             'Contact Us' => 'contactUs',
-            'Login' => 'login',
-            'Logout' => 'logout'
+            'Logout' => 'logout' 
         ],
         'admin' => [
             'Home' => '/',
@@ -18,9 +23,17 @@ if (login){
             'Store' => 'store',
             'Contact Us' => 'contactUs',
             'Manage Items' => 'manageUsers',
-            'Login' => 'login',
             'Logout' => 'logout'
-            
+        ]
+        ];
+} else {
+    return [
+        'customer' => [
+        'Home' => '/',
+        'About Us' => 'aboutUs',
+        'Store' => 'store',
+        'Contact Us' => 'contactUs',
+        'Login' => 'login'
         ]
     ];
 }
