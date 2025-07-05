@@ -33,3 +33,36 @@
     padding: 0.5rem 1rem;
     border:1px solid chartreuse ;
 }
+
+.navbar-item.dropdown {
+  position: relative;
+}
+
+.dropdown-title {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+  min-width: 160px;
+}
+
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+
+.navbar-item.dropdown:hover .dropdown-content {
+  display: block;
+}

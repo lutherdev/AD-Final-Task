@@ -8,5 +8,6 @@ if (php_sapi_name() === 'cli-server') {
         return false;
     }
 }
-
+require_once UTILS_PATH . '/auth.util.php';
+Auth::init();
 require BASE_PATH . '/index.php';

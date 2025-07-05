@@ -1,3 +1,7 @@
+<?php
+$error = $_GET['error'] ?? '';
+?>
+
 <div class="login-container">
   <div class="parchment-login">
     <h2 class="login-title">MineForge Access</h2>
