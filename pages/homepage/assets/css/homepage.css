@@ -103,13 +103,25 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.btn-gold:hover {
+    background-color: #c19b2e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-outline:hover {
+    background: rgba(212,175,55,0.1);
+    transform: translateY(-3px);
+}
+
 .intro-container {
     background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
     url('/pages/homepage/assets/img/background.jpg');
     padding: 4rem 1rem;
+    margin-top: -5rem;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 .intro-content {
