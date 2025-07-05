@@ -1,10 +1,10 @@
 .carousel-container {
   display: flex;
   justify-content: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   position: relative;
-  width: 100%;
-  max-width: 1550px;
-  margin: 0 auto;
+  background: rgba(43, 21, 21, 0.2);
 }
 
 
@@ -24,9 +24,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
-    pointer-events: none;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 100%);
 }
 
 .carousel {
@@ -34,12 +33,18 @@
 }
 
 .carousel-item {
-    transition: opacity 1.5 ease-in-out;
+    transition: opacity 1.2 ease-in-out;
 }
 .carousel-item img {
     object-fit: cover;
-    height: 600px;
+    height: 80vh;
     width: 100%;
 }
 
-
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    background: transparent;
+    opacity: 0.7;
+    transition: all 0.3 ease;
+}
