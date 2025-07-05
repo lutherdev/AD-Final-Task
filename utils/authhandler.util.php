@@ -29,9 +29,9 @@ try {
 // ]);
 // echo "Connected to PostgreSQL!\n";
 
-if (session_status() === PHP_SESSION_NONE) {  //THIS IS NEEDED SINCE EVEN IF LOGIN INDEX CALLED THIS FILE, ROUTER AND ITS AUTH INIT WASNT USED SINCE ERROR CAME FAST SOO YEAH
-        session_start(); 
-}
+    if (session_status() === PHP_SESSION_NONE) {  //THIS IS NEEDED SINCE EVEN IF LOGIN INDEX CALLED THIS FILE, ROUTER AND ITS AUTH INIT WASNT USED SINCE ERROR CAME FAST SOO YEAH
+            session_start(); 
+    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'login') {
         $username = trim($_POST['username']);
@@ -40,9 +40,6 @@ if (session_status() === PHP_SESSION_NONE) {  //THIS IS NEEDED SINCE EVEN IF LOG
         if ($username == $defaultAccs[0]['username']){
             if ($password == $defaultAccs[0]['password']){
                 $_SESSION['user'] = $defaultAccs[0];
-
-                echo "login success";
-                echo "welcome : " . $_SESSION['user']['username'];
                 header("Location: /"); //passes this location to the routing control which is router.php then processes the "/"
                 exit;
             } else {
@@ -51,6 +48,23 @@ if (session_status() === PHP_SESSION_NONE) {  //THIS IS NEEDED SINCE EVEN IF LOG
         }else {
                 echo "wrong username";
             }
+    }
+
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'register') {
+    $username = $_POST['username'];
+    $rawPassword = $_POST['password'];
+
+    $hashedPassword = password_hash($rawPassword, PASSWORD_DEFAULT);
+
+    $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
+    $stmt->execute([
+        ':username' => $username,
+        ':password' => $hashedPassword
+    ]);
+    echo 'register success';
+    header("Location: /");
+    exit;
     }
 
 }   catch (Exception $e) {
