@@ -63,7 +63,7 @@ try {
         'wallet' => $_POST['wallet']
     ];
     
-    $dbfiles = [DATABASE_PATH . '/users.model.sql'];
+    $dbfiles = [DATABASE_PATH . '/users.model.sql', DATABASE_PATH . '/users_messages.model.sql'];
     foreach ($dbfiles as $dbfile){
         $num = 1;
         $sql = file_get_contents($dbfile);
