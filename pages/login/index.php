@@ -19,7 +19,7 @@ $error = $_GET['error'] ?? '';
     <input type="password" id="password" name="password" class="form-input" required>
   </div>
       <input type="hidden" name="action" value="login">
-      <button type="submit" class="login-btn">Login</button>
+      <button type="submit" class="login-btn">Enter The Mines</button>
 
       <?php if (!empty($error)): ?>
         <p class="error"><?= htmlspecialchars($error) ?></p>
