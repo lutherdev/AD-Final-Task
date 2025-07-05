@@ -30,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':message' => $message
             ]);
 
-            header("Location: /contactUs?success=1");
+            header("Location: /contact-us?success=1");
             exit;
 
         } catch (Exception $e) {
             error_log("DB Error: " . $e->getMessage());
-            header("Location: /contactUs?error=1");
+            header("Location: /contact-us?error=1");
             exit;
         }
     } else {
-        header("Location: /contactUs?error=missing");
+        header("Location: /contact-us?error=missing");
         exit;
     }
 }
