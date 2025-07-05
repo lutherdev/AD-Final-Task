@@ -1,12 +1,10 @@
 <?php
     require_once BASE_PATH . '/bootstrap.php';
 
-    $site_name = $site_name ?? 'MineForge';
+    $site_name = 'MineForge';
 
-    $user_role = $_SESSION['user_role'] ?? 'customer';
-
+    $user_role = $_SESSION['user']['role'] ?? 'customer';
     $nav_config = require STATICDATAS_PATH . '/navConfig.staticData.php';
-    
     $navbar_items = $nav_config[$user_role] ?? [];
 
     $current_page = basename($_SERVER['PHP_SELF']);
