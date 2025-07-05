@@ -43,10 +43,12 @@ try {
                 header("Location: /"); //passes this location to the routing control which is router.php then processes the "/"
                 exit;
             } else {
-                echo "wrong pass";
+                header("Location: /login?error=Invalid+password");
+                exit;
             }
         }else {
-                echo "wrong username";
+                header("Location: /login?error=Invalid+username");
+                exit;
             }
     }
 
