@@ -15,7 +15,7 @@ if (isset($_SESSION['user'])) {
             'About Us' => 'aboutUs',
             'Store' => 'store',
             'Contact Us' => 'contactUs',
-            'Logout' => 'logout' 
+            'Logout' => 'handlers/logout.handler.php' 
         ],
         'admin' => [
             'Home' => '/',
@@ -23,7 +23,7 @@ if (isset($_SESSION['user'])) {
             'Store' => 'store',
             'Contact Us' => 'contactUs',
             'Manage Items' => 'manageUsers',
-            'Logout' => 'logout'
+            'Logout' => 'handlers/logout.handler.php'
         ]
         ];
 } else {
