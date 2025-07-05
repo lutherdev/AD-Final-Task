@@ -52,8 +52,8 @@ $carouselCss = '/pages/homepage/assets/css/carousel.css';
       <h1>KINGDOM OF WYRMFORGE</h1>
       <p>Mine the most exquisite, high-grade veins beneath the Sword Coast mountains.</p>
       <div class="hero-btn">
-        <a href="/pages/store/index.php" class="btn-gold">Browse Our Wares</a>
-        <a href="/pages/aboutUs/index.php" class="btn-outline">Learn Our History</a>
+        <a href="store" class="btn-gold">Browse Our Wares</a>
+        <a href="aboutUs" class="btn-outline">Learn Our History</a>
       </div>
     </div>
   </div>
