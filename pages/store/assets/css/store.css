@@ -88,6 +88,20 @@ body {
   font-size: 1.4rem;
   margin-bottom: 15px;
   color: #5a4231;
+  overflow-y: scroll;
+}
+
+.cart-box::-webkit-scrollbar {
+  width: 13px;
+}
+
+.cart-box::-webkit-scrollbar-thumb {
+  background-color: #463925;
+  border-radius: 100px;
+}
+
+.cart-box::-webkit-scrollbar-track {
+  background-color: #38301d;
 }
 
 .cart-box ul,
