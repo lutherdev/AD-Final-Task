@@ -23,12 +23,23 @@
             </div>
 
             <div class="navbar-menu">
-            <?php foreach($navbar_items as $title => $url) : ?>
-                <a href="<?php echo htmlspecialchars($url); ?>"
-                   class="navbar-item <?php echo ($current_page === $url) ? 'is-active' : ''; ?>">
-                   <?php echo htmlspecialchars($title); ?>
-                </a>
-            <?php endforeach; ?>
+                <?php foreach ($navbar_items as $title => $url): ?>
+                    <?php if (is_array($url)): ?>
+                        <div class="navbar-item dropdown">
+                            <span class="dropdown-title"><?php echo htmlspecialchars($title); ?></span>
+                            <div class="dropdown-content">
+                                <?php foreach ($url as $subTitle => $subUrl): ?>
+                                    <a href="<?php echo htmlspecialchars($subUrl); ?>"><?php echo htmlspecialchars($subTitle); ?></a>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php else: ?>
+                        <a href="<?php echo htmlspecialchars($url); ?>"
+                        class="navbar-item <?php echo ($current_page === $url) ? 'is-active' : ''; ?>">
+                        <?php echo htmlspecialchars($title); ?>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
          </div>
     </nav>

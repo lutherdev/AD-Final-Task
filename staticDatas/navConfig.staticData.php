@@ -33,7 +33,10 @@ if (isset($_SESSION['user'])) {
         'About Us' => 'aboutUs',
         'Store' => 'store',
         'Contact Us' => 'contactUs',
-        'Login' => 'login'
+        'Account' => [
+                'Login' => 'login',
+                'Register' => 'register'
+            ]
         ]
     ];
 }
