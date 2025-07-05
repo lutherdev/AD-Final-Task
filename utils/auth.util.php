@@ -11,7 +11,6 @@ class Auth{
             'password' => 'notched',
             'first_name' => 'Notch',
             'last_name' => 'Ford',
-            'email' => 'NotyourEmail@gmail.com',
             'role' => 'admin',
             'wallet' => 999999
         ];
