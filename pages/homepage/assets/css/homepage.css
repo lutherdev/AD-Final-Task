@@ -10,9 +10,102 @@
     margin-left: calc(-50vw + 50%);
 }
 
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.hero-carousel {
+    height: 100%;
+}
+
+.hero-carousel-img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom,
+            rgba(11,6,6,0.4) 0%,
+            rgba(30,15,15,0.7) 50%,
+            rgba(11,6,6,0.9) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f0e6d2;
+    z-index: 2;
+    width: 80%;
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content h1 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #D4Af37;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-gold {
+    background:#D4Af37;
+    color: #3a2a0e;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.1rem;
+    transition: all 0.3 ease;
+    text-shadow: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-outline {
+    background:transparent;
+    color: #D4Af37;
+    padding: 0.75rem 2rem;
+    border: 2px solid #D4Af37;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.1rem;
+    transition: all 0.3 ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 .intro-container {
     background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
-    url('/pages/homepage/assets/img/parchment-bg.jpg');
+    url('/pages/homepage/assets/img/background.jpg');
     padding: 4rem 1rem;
     text-align: center;
     position: relative;
