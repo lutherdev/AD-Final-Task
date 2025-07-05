@@ -4,7 +4,7 @@ require_once STATICDATAS_PATH . '/dummies/store.staticData.php';
 
 <section class="store-container" id="inventory">
   <div class="store-header">
-    <h1>Miner's Inventory</h1>
+    <h1>Miner's Ware</h1>
     <div class="store-filters">
       <button class="menu-btn">Ore</button>
       <button class="menu-btn">Tools</button>
