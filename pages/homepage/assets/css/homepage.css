@@ -117,8 +117,10 @@
 .intro-container {
     background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
     url('/pages/homepage/assets/img/background.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 4rem 1rem;
-    margin-top: -5rem;
+    margin-top: -12rem;
     text-align: center;
     position: relative;
     z-index: 3;
