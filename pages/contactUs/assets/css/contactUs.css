@@ -1,12 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'MedievalSharp', cursive, Arial, sans-serif;
   margin: 0;
-  background-color: #f3dfc4;
+  background-image: url('../img/rockBG3.png');
+  background-color: #1b1b1b;
+  color: #2d1b00;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -18,75 +18,75 @@ body {
   flex-wrap: wrap;
 }
 
-/* LOCATION: unchanged */
-.location {
+.location, .comment {
   flex: 1;
-  padding: 20px;
-  background-color: #f8e7d2;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 40px 20px;
+  background-image: url('../img/agedpaper.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 5px solid #5a3e1a;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
 }
 
-.location h1 {
+.location h1, .comment h1 {
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 20px;
+  font-family: 'MedievalSharp', cursive;
+  color: #3e240c;
+  text-shadow: 1px 1px #f1d6a3;
 }
 
-.location iframe {
+.medieval-map img {
   width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 20px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px dashed #7e5d3c;
+  margin-bottom: 10px;
+}
+
+.map-hint {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  color: #6c4e2c;
+  margin-top: -10px;
 }
 
 .contact-info p {
   margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .contact-info .label {
   font-weight: bold;
+  color: #3e240c;
 }
 
-.comment {
-  flex: 1;
-  padding: 40px 20px;
-  background-image: url('../img/scroll.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;
-  min-height: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.comment h1 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.box-name,
-.box-email,
-.box-message {
+.box-name, .box-email, .box-message {
   margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: transparent;
   padding: 10px;
   border-radius: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #a9825c;
   font-size: 14px;
+  background-color: #fcf5e8;
+  color: #2d1b00;
+  font-family: 'MedievalSharp', cursive;
 }
 
 textarea {
@@ -99,19 +99,26 @@ textarea {
   align-items: center;
   margin: 0 auto;
   width: fit-content;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: transparent;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
 .box-button button {
-  background-color: #c8924d;
-  color: white;
-  padding: 10px 20px;
+  background-color: #55360e;
+  color: #f8e6c2;
+  padding: 10px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'MedievalSharp', cursive;
+  box-shadow: 0 0 10px rgba(255, 207, 120, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.box-button button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 160, 80, 0.8);
+}
