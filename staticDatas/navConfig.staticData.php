@@ -2,18 +2,26 @@
 
 require_once BASE_PATH . '/bootstrap.php';
 
-return [
-    'customer' => [
-        'Home' => '/',
-        'About Us' => 'aboutUs',
-        'Store' => 'store',
-        'Contact Us' => 'contactUs',
-        'Login' => 'login'
-    ],
-    'admin' => [
-        'Dashboard' => 'dashboard',
-        'Manage Users' => 'manageUsers',
-        'Reports' => 'reports',
-        'Logout' => 'logout'
-    ]
-];
+if (login){
+    return [
+        'customer' => [
+            'Home' => '/',
+            'About Us' => 'aboutUs',
+            'Store' => 'store',
+            'Contact Us' => 'contactUs',
+            'Login' => 'login',
+            'Logout' => 'logout'
+        ],
+        'admin' => [
+            'Home' => '/',
+            'About Us' => 'aboutUs',
+            'Store' => 'store',
+            'Contact Us' => 'contactUs',
+            'Manage Items' => 'manageUsers',
+            'Login' => 'login',
+            'Logout' => 'logout'
+            
+        ]
+    ];
+}
+
