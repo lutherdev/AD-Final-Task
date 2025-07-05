@@ -1,0 +1,124 @@
+body {
+  font-family: 'MedievalSharp', cursive, Arial, sans-serif;
+  margin: 0;
+  background-image: url('../img/rockBG3.png');
+  background-color: #1b1b1b;
+  color: #2d1b00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contactus-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.location, .comment {
+  flex: 1;
+  padding: 40px 20px;
+  background-image: url('../img/agedpaper.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+}
+
+.location h1, .comment h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: 'MedievalSharp', cursive;
+  color: #3e240c;
+  text-shadow: 1px 1px #f1d6a3;
+}
+
+.medieval-map img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-info .label {
+  font-weight: bold;
+  color: #3e240c;
+}
+
+.box-name, .box-email, .box-message {
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #36210c;
+  font-size: 14px;
+  background-color: #927641;
+  color: #2d1b00;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.comment input::placeholder,
+.comment textarea::placeholder {
+    color: #000000; /* Change to your desired color */
+    opacity: 1;     /* Optional: Ensures full visibility */
+}
+
+
+textarea {
+  height: 150px;
+}
+
+.box-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.box-button button {
+  background-color: #55360e;
+  color: #f8e6c2;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'MedievalSharp', cursive;
+  box-shadow: 0 0 10px rgba(255, 207, 120, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box-button button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 160, 80, 0.8);
+}
+
+.input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 160, 80, 0.8);
+}
