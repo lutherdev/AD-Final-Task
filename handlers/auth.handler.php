@@ -55,6 +55,7 @@ try {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'register') {
     
     //TODO: BACKEND: CREATE A UTIL THAT JUDGES THE USERNAME AND PASSWORD AND ALL OTHER INPUTS
+    //TODO: BACKEND: SHOULD EXIT IF JUDGE FAILED BEFORE CREATING THIS USER SESSION ARRAY
     $_SESSION['user'] = [
         'id' => $_POST['id'],
         'username' => $_POST['username'],
