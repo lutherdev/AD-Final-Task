@@ -12,16 +12,16 @@ if (isset($_SESSION['user'])) {
     return [
         'customer' => [
             'Home' => '/',
-            'About Us' => 'aboutUs',
+            'About Us' => 'aboutus',
             'Store' => 'store',
-            'Contact Us' => 'contactUs',
+            'Contact Us' => 'contactus',
             'Logout' => 'handlers/logout.handler.php' 
         ],
         'admin' => [
             'Home' => '/',
-            'About Us' => 'aboutUs',
+            'About Us' => 'aboutus',
             'Store' => 'store',
-            'Contact Us' => 'contactUs',
+            'Contact Us' => 'contactus',
             'Manage Items' => 'manageUsers',
             'Logout' => 'handlers/logout.handler.php'
         ]
@@ -30,9 +30,9 @@ if (isset($_SESSION['user'])) {
     return [
         'customer' => [
         'Home' => '/',
-        'About Us' => 'aboutUs',
+        'About Us' => 'aboutus',
         'Store' => 'store',
-        'Contact Us' => 'contactUs',
+        'Contact Us' => 'contactus',
         'Account' => [
                 'Login' => 'login',
                 'Register' => 'register'
