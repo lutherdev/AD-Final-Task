@@ -27,26 +27,20 @@ $products = [
 ];
 
 $homePageCss = '/pages/homepage/assets/css/homepage.css';
-$carouselCss = '/pages/homepage/assets/css/carousel.css';
 ?>
 
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?= htmlspecialchars($carouselCss) ?>">
 <main class="homepage-container">
 <section class="hero-section">
   <div class="hero-carousel">
-    <div id="mineCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-inner">
-        <?php foreach ($carousel_items as $i => $item): ?>
-          <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>">
-            <img src="/pages/homepage/assets/img/<?= htmlspecialchars($item['src']) ?>"
-                class="d-block w-100"
-                alt="<?= htmlspecialchars($item['alt']) ?>">
-          </div>
-        <?php endforeach; ?>
+    <?php foreach ($carousel_items as $item): ?>
+      <div class="carousel-item">
+        <img src="/pages/homepage/assets/img/<?= htmlspecialchars($item['src']) ?>"
+             alt="<?= htmlspecialchars($item['alt'])?>">
       </div>
-    </div>
+      <?php endforeach; ?>
+   </div> 
     <div class = "hero-overlay"></div>
     <div class = "hero-content">
       <h1>KINGDOM OF WYRMFORGE</h1>
@@ -85,4 +79,3 @@ $carouselCss = '/pages/homepage/assets/css/carousel.css';
   </section>
 </div>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
