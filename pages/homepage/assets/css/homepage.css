@@ -1,13 +1,13 @@
+body {
+    margin: -1.5rem;
+    padding: 0;
+}
+
 .homepage-container {
     background: linear-gradient(rgba(11, 6, 6, 0.9), rgba(30,15,15,0.9)),
     url('/pages/homepage/assets/img/productbg.jpg');
     color: #f0e6d2;
     overflow-x: hidden;
-}
-
-.carousel-section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
 }
 
 .hero-section {
@@ -19,16 +19,41 @@
 }
 
 .hero-carousel {
-    height: 100%;
-}
-
-.hero-carousel-img {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.8) contrast(1.1);
+    overflow: hidden;
 }
 
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation */
+.carousel-item:nth-child(1) {
+  animation: fade 12s infinite;
+}
+.carousel-item:nth-child(2) {
+  animation: fade 12s infinite 4s;
+}
+.carousel-item:nth-child(3) {
+  animation: fade 12s infinite 8s;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -120,7 +145,7 @@
     background-size: cover;
     background-position: center;
     padding: 4rem 1rem;
-    margin-top: -7.31rem;
+    margin-top: -1rem;
     text-align: center;
     position: relative;
     z-index: 3;
