@@ -45,6 +45,11 @@ body {
   background: #5a4231;
 }
 
+.menu-btn.active {
+  background: #5a4231;
+  color: white;
+}
+
 .store-main {
   display: flex;
   gap: 40px;
@@ -169,11 +174,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 10%; /* sdomsdoasmda */
   width: 100%;
+  height: 850px;
+  overflow-y: auto;
+  padding: 40px;
   display: flex;
-  justify-content: center; 
-  align-items: center; /* sdomsdoasmda */
+  justify-content: center;
+  align-items: flex-start;
+  border: 5px solid red;
+  box-sizing: border-box;
+}
+
+.products-image-wrapper::-webkit-scrollbar{
+  width: 13px;
+}
+
+.products-image-wrapper::-webkit-scrollbar{
+  background-color: #38301d;
 }
 
 .products-grid {
@@ -183,6 +200,7 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center; 
+  border: 5px solid red;
 }
 
 .product-card {
