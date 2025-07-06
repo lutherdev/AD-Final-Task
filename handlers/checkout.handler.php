@@ -49,18 +49,18 @@ try {
             ':total' => $item['price'] * $item['quantity']
         ]);
     }
-   //TODO: DATABASE CREATE A WAY TO MINUS THE QUANTITY OF EACH ITEM TO THE CORRESPONDING ITEM IN THE ITEMS DATABASE
-    // $updateStmt = $pdo->prepare(
-    //     "UPDATE items
-    //         SET quantity = quantity - :purchased_quantity
-    //         WHERE name = :item_name AND category = :item_category"
-    // );
+//    TODO: DATABASE CREATE A WAY TO MINUS THE QUANTITY OF EACH ITEM TO THE CORRESPONDING ITEM IN THE ITEMS DATABASE
+    $updateStmt = $pdo->prepare(
+        "UPDATE items
+            SET quantity = quantity - :purchased_quantity
+            WHERE name = :item_name AND category = :item_category"
+    );
 
-    // $updateStmt = $pdo->execute(
-    //     [':purchased_quantity' => $item['quantity'],
-    //     ':item_name' => $item['name'],
-    //     ':item_category' => $item['category']]
-    // );
+    $updateStmt->execute(
+        [':purchased_quantity' => $item['quantity'],
+        ':item_name' => $item['name'],
+        ':item_category' => $item['category']]
+    );
 
     $pdo->commit();
 
