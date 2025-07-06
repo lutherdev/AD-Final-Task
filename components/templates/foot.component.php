@@ -1,3 +1,8 @@
+
+<?php
+function footer() {
+    ?>
+    <link rel="stylesheet" href="/assets/css/foot.component.css">
 <footer class="mineforge-footer">
     <div class="footer-grid">
         <div class="footer-column">
@@ -27,6 +32,9 @@
     </div>
 
     <div class="footer-bottom">
-        <p>© 2025 <strong>MineForge</strong>. All ores reserved. Mined and forged in the mountains of <em>word Coast</em>.</p>
+        <p>© 2025 <strong>MineForge</strong>. All ores reserved. Mined and forged in the mountains of <em>Sword Coast</em>.</p>
     </div>
 </footer>
+    <?php
+}
+?>
