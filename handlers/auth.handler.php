@@ -53,32 +53,8 @@ try {
     
     //TODO: BACKEND: CREATE A UTIL THAT JUDGES THE USERNAME AND PASSWORD AND ALL OTHER INPUTS
     //TODO: BACKEND: SHOULD EXIT IF JUDGE FAILED BEFORE CREATING THIS USER SESSION ARRAY
-    $_SESSION['user'] = [
-        'id' => $_POST['id'],
-        'username' => $_POST['username'],
-        'password' => $_POST['password'],
-        'first_name' => $_POST['firstname'],
-        'last_name' => $_POST['lastname'],
-        'role' => $_POST['role'],
-        'wallet' => $_POST['wallet']
-    ];
-    
-    $dbfiles = [DATABASE_PATH . '/users.model.sql', DATABASE_PATH . '/users_messages.model.sql'];
-    foreach ($dbfiles as $dbfile){
-        $num = 1;
-        $sql = file_get_contents($dbfile);
-        if (!$sql) {
-            throw new RuntimeException("❌ Could not read the SQL file");
-        }
-    $pdo->exec($sql);
-    }
-
-    // foreach (['users'] as $table) {
-    //     $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
-    // } 
-
+ 
     //TODO: DATABASE: FIX THIS DATABASE STUFF, CHANGE THE CODE INSIDE PREPARE, AND ADD MORE DATA TO BE INPUTTED
-        $id = $_POST['id'];
         $username = $_POST['username'];
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
@@ -87,9 +63,8 @@ try {
         $rawPassword = $_POST['password'];
         $hashedPassword = password_hash($rawPassword, PASSWORD_DEFAULT);
 
-        $stmt = $pdo->prepare("INSERT INTO users (id, username, password, first_name, last_name, role, wallet) VALUES (:id, :username, :password, :firstname, :lastname, :role, :wallet)");
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, first_name, last_name, role, wallet) VALUES (:username, :password, :firstname, :lastname, :role, :wallet)");
         $stmt->execute([
-            ':id' => $id,
             ':username' => $username,
             ':password' => $hashedPassword,
             ':firstname' => $firstname,
@@ -97,6 +72,12 @@ try {
             ':role' => $role,
             ':wallet' => $wallet
         ]);
+
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt->execute([':username' => $username]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user'] = $user;
     header("Location: /");
     exit;
     }
