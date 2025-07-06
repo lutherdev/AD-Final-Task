@@ -22,6 +22,7 @@ if (isset($_SESSION['user'])) {
             'About Us' => 'about-us',
             'Store' => 'store',
             'Contact Us' => 'contact-us',
+            'Manage Items' => 'manage-items',
             'Manage' => [
                 'Add Item' => 'add-items',
                 'Edit Item' => 'edit-items',
