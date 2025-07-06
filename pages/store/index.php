@@ -19,6 +19,10 @@ require_once STATICDATAS_PATH . '/dummies/store.staticData.php';
           <h2>Cart</h2>
           <ul id="cart-items"></ul>
           <div class="total">Total: ₱<span id="cart-total">0</span></div>
+          <div class='cart-buttons'>
+            <div class='btn-cancel'><button>CHECKOUT</button></div>
+            <div class='btn-cancel'><button>CANCEL</button></div>
+          </div>
         </aside>
       </div>
 
