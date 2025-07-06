@@ -1,4 +1,3 @@
-
 <?php
 //REQUIRE THIS FILE IF YOU NEED SETTER SUCH AS ENVIRONMENT/AUTHENTICATION/PATHS/CONNECTION TO PDO
 
@@ -19,8 +18,6 @@ define('ASSETS_PATH', BASE_PATH . '/assets');
 chdir(BASE_PATH);
 
 require_once UTILS_PATH . '/envSetter.util.php';
-require_once UTILS_PATH . '/auth.util.php';
-Auth::init();
 
 // $host = $dbConfig['pgHost']; 
 // $port = $dbConfig['pgPort'];

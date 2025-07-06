@@ -4,6 +4,10 @@ class Auth{
     public static function init(): void {
     if (session_status() === PHP_SESSION_NONE) { //IF SESSION IS NONE : LIKE NO STARTED SESSION THEN =
         session_start(); // START THE SESSION NOW!
+        if (headers_sent($file, $line)) {
+    error_log("⚠️ Headers already sent in $file on line $line");
+}
+
         } 
     }   
     //FOR LOGGIN IN
@@ -26,6 +30,24 @@ class Auth{
     public static function user(): ?array
     {
         return $_SESSION['user'] ?? null;
+    }
+
+    public static function logout(): void
+    {
+        $_SESSION = [];
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params["path"],
+                $params["domain"],
+                $params["secure"],
+                $params["httponly"]
+            );
+        }
+        session_destroy();
     }
 
 }

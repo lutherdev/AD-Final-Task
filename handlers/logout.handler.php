@@ -1,7 +1,11 @@
 <?php
+require_once BASE_PATH . '/utils/auth.util.php';
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-session_destroy();
+
+Auth::logout();
+
 header("Location: /login");
 exit;
