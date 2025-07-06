@@ -22,6 +22,12 @@ if (!$user) {
     exit;
 }
 
+if (!isset($user['id'])) {
+    http_response_code(403);
+    echo json_encode(["message" => "User ID missing from session."]);
+    exit;
+}
+
 // ISA ISANG ITEM INIINSERT NA GALING SA CART PINASA THROUGH POST AND JSON
 try {
     $pdo->beginTransaction();
@@ -43,27 +49,30 @@ try {
             ':total' => $item['price'] * $item['quantity']
         ]);
     }
+   //TODO: DATABASE CREATE A WAY TO MINUS THE QUANTITY OF EACH ITEM TO THE CORRESPONDING ITEM IN THE ITEMS DATABASE
+    // $updateStmt = $pdo->prepare(
+    //     "UPDATE items
+    //         SET quantity = quantity - :purchased_quantity
+    //         WHERE name = :item_name AND category = :item_category"
+    // );
 
-    $updateStmt = $pdo->prepare(
-        "UPDATE items
-            SET quantity = quantity - :purchased_quantity
-            WHERE name = :item_name AND category = :item_category"
-    );
-
-    $updateStmt = $pdo->execute(
-        [':purchased_quantity' => $item['quantity'],
-        ':item_name' => $item['name'],
-        ':item_category' => $item['category']]
-    );
+    // $updateStmt = $pdo->execute(
+    //     [':purchased_quantity' => $item['quantity'],
+    //     ':item_name' => $item['name'],
+    //     ':item_category' => $item['category']]
+    // );
 
     $pdo->commit();
 
-    //TODO: DATABASE CREATE A WAY TO MINUS THE QUANTITY OF EACH ITEM TO THE CORRESPONDING ITEM IN THE ITEMS DATABASE
-    
     echo json_encode(["message" => "Order placed successfully."]); //ETO UNG PARANG REPLY SA PINASA, NIRERECIEVE PAPUNTA DUN SA RESPONSE SA STORE.JS
 
 } catch (Exception $e) {
     $pdo->rollBack();
     http_response_code(500);
-    echo json_encode(["message" => "Checkout failed.", "error" => $e->getMessage()]);
+    echo json_encode([
+        "message" => "Checkout failed.",
+        "error" => $e->getMessage(),
+        "trace" => $e->getTraceAsString() // Optional, only for debugging
+    ]);
+    exit;
 }
