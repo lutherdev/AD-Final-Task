@@ -1,13 +1,14 @@
-<div class="edit">
+<div class="edit-outer">
+  <div class="edit">
     <h2>Edit Item</h2>
-    <form action="handlers/add_item.handler.php" method="POST">
+    <form action="handlers/edit_item.handler.php" method="POST">
         <label>ID:</label>
         <input type="text" name="id" required>
 
-        <label>Item name:</label>
+        <label>Item Name:</label>
         <input type="text" name="item-name">
 
-        <label>What to edit:</label>
+        <label>What to Edit:</label>
         <input type="text" name="edit">
 
         <label>Changes:</label>
@@ -16,3 +17,4 @@
         <button type="submit">Edit Item</button>
     </form>
   </div>
+</div>

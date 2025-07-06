@@ -1,4 +1,5 @@
-<div class="add">
+<div class="add-outer">
+  <div class="add">
     <h2>Add New Item</h2>
     <form action="handlers/add_item.handler.php" method="POST">
         <label>Item Name:</label>
@@ -16,3 +17,4 @@
         <button type="submit">Add Item</button>
     </form>
   </div>
+</div>
