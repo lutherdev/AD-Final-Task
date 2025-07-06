@@ -1,4 +1,5 @@
-<div class="remove">
+<div class="remove-outer">
+  <div class="remove">
     <h2>Remove Item</h2>
     <form action="handlers/remove-item.handler.php" method="POST">
         <label>ID:</label>
@@ -7,6 +8,7 @@
         <label>Item Name:</label>
         <input type="text" name="item-name">
 
-        <button type="submit">Add Item</button>
+        <button type="submit">Remove Item</button>
     </form>
   </div>
+</div>
