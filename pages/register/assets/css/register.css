@@ -1,72 +1,111 @@
+body {
+  background: linear-gradient(rgba(11,6,6,0.9), rgba(34, 16, 16, 0.9)),
+  url('../img/cave_bg.jpg') center/cover;
+  font-family: 'Book Antiqua', serif;
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+}
+
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .register-box {
-  background-color: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  width: 340px;
+  background: linear-gradient(rgba(242,227,197,0.9), rgba(242,227,197,0.9)),
+  url('../img/parchment-bg.jpg') center/cover;
+  padding: 2.5rem;
+  border-radius: 5px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
 }
+
 
 .register-box h2 {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #d4af37;
+  text-shadow: 1px 1px 2px #1a1a1a;
 }
 
-.register-box form label {
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group {
   display: block;
-  margin-top: 20px;
-  color: #555;
-  font-weight: 500;
-}
-
-.register-box input[type="text"],
-.register-box input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: transparent;
-  outline: none;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-.register-box input[type="text"]:focus,
-.register-box input[type="password"]:focus {
-  border-bottom-color: #007bff;
-}
-
-.register-box button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 10px;
-  background: #e0e0e0;
-  border: none;
-  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
   font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-bottom: 2px solid #5c4d3c;
+  background-color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: 'Georgia',serif;
+}
+
+.input-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235c4d3c'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+    padding-right: 2rem;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus,
+.input-group select:focus {
+  border-bottom-color: #d4af37;
+  background-color: rgba(255,255,255,0.9);
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  background: #d4af37;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  font-family: 'Book Antiqua', serif;
+  text-transform: uppercase;
 }
 
 .register-box button:hover {
-  background: #c0c0c0;
+  background: #f1c40f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212,175,55,0.4);
 }
 
 .error {
-  color: red;
-  margin-top: 15px;
+  color: #c0392b;
+  margin-top: 1rem;
   text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
