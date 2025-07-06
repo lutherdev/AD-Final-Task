@@ -10,7 +10,7 @@ require_once BASE_PATH . '/vendor/autoload.php';
 // 2. Load templates
 require_once TEMPLATES_PATH . '/head.component.php';
 require_once TEMPLATES_PATH . '/nav.component.php';
-//require_once TEMPLATES_PATH . '/foot.component.php';
+require_once TEMPLATES_PATH . '/foot.component.php';
 require_once UTILS_PATH . "/envSetter.util.php";
 
 // 3. Load nav data
@@ -25,5 +25,5 @@ function renderMainLayout(callable $content, string $title, string $pageCss = ""
     //navHeader($headNavList, $user);
     require_once COMPONENTS_PATH . '/templates/nav.component.php';
     $content();
-    //footer();
+    footer();
 }
