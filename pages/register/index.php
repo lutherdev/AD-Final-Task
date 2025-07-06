@@ -33,6 +33,7 @@ $error = $_GET['error'] ?? '';
           <option value="">--Select Role--</option>
           <option value="customer">Customer</option>
           <option value="admin">Admin</option>
+        </select>
       </div>
 
       <div class="input-group">
