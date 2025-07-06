@@ -54,7 +54,6 @@ try {
     //TODO: BACKEND: CREATE A UTIL THAT JUDGES THE USERNAME AND PASSWORD AND ALL OTHER INPUTS
     //TODO: BACKEND: SHOULD EXIT IF JUDGE FAILED BEFORE CREATING THIS USER SESSION ARRAY
     $_SESSION['user'] = [
-        'id' => $_POST['id'],
         'username' => $_POST['username'],
         'password' => $_POST['password'],
         'first_name' => $_POST['firstname'],
@@ -78,7 +77,6 @@ try {
     // } 
 
     //TODO: DATABASE: FIX THIS DATABASE STUFF, CHANGE THE CODE INSIDE PREPARE, AND ADD MORE DATA TO BE INPUTTED
-        $id = $_POST['id'];
         $username = $_POST['username'];
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
@@ -87,9 +85,8 @@ try {
         $rawPassword = $_POST['password'];
         $hashedPassword = password_hash($rawPassword, PASSWORD_DEFAULT);
 
-        $stmt = $pdo->prepare("INSERT INTO users (id, username, password, first_name, last_name, role, wallet) VALUES (:id, :username, :password, :firstname, :lastname, :role, :wallet)");
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, first_name, last_name, role, wallet) VALUES (:username, :password, :firstname, :lastname, :role, :wallet)");
         $stmt->execute([
-            ':id' => $id,
             ':username' => $username,
             ':password' => $hashedPassword,
             ':firstname' => $firstname,
