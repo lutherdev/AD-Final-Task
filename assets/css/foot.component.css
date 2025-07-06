@@ -1,0 +1,64 @@
+.mineforge-footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 2rem 0;
+    font-family: 'Georgia', serif;
+    border-top: 2px solid #d4af37;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.footer-column {
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin: 0.5rem 0;
+}
+
+.footer-column a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #d4af37;
+}
+
+.footer-column .icon {
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #5c4d3c;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom strong {
+    color: #d4af37;
+}
