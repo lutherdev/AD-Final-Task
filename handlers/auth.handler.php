@@ -53,6 +53,7 @@ try {
     
     //TODO: BACKEND: CREATE A UTIL THAT JUDGES THE USERNAME AND PASSWORD AND ALL OTHER INPUTS
     //TODO: BACKEND: SHOULD EXIT IF JUDGE FAILED BEFORE CREATING THIS USER SESSION ARRAY
+
     $_SESSION['user'] = [
         'username' => $_POST['username'],
         'password' => $_POST['password'],
@@ -94,6 +95,12 @@ try {
             ':role' => $role,
             ':wallet' => $wallet
         ]);
+
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt->execute([':username' => $username]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user'] = $user;
     header("Location: /");
     exit;
     }
