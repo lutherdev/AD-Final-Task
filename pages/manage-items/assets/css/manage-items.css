@@ -1,0 +1,46 @@
+.manage-outer-container {
+    font-family: 'MedievalSharp', serif, cursive;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+.manage-container {
+    background-color: rgba(44, 36, 26, 0.85);
+    padding: 3.5rem;
+    border: 6px solid #d4af37;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.manage-container h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.manage-button {
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #a9823a;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #8b6b3f, #5a4b30);
+    color: #abaaa6;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.manage-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #624c2c, #937c49);
+}
