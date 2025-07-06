@@ -1,6 +1,4 @@
 <?php
-    require_once BASE_PATH . '/bootstrap.php';
-
     $site_name = 'MineForge';
 
     $user_role = $_SESSION['user']['role'] ?? 'customer';

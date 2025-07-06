@@ -8,7 +8,7 @@ $error = $_GET['error'] ?? '';
     <div class = "login-divider">⚒⚒⚒</div>
 
 
-<form action="utils/authhandler.util.php" method="POST" class="login-form">
+<form action="/handlers/auth.handler.php" method="POST" class="login-form">
   <div class="form-group">
     <label>Username: </label>
     <input type="text" name="username" required>

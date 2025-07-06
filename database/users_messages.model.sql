@@ -1,6 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
-CREATE TABLE users_messages (
+CREATE TABLE IF NOT EXISTS users_messages (
     id UUID NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),
     name TEXT NOT NULL,
     username TEXT NOT NULL,

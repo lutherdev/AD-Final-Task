@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    margin: 0;
+    margin: -20px;
     overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ body {
     margin-left: calc(-50vw + 50%);
     height: 400px;
     display: flex;
+    padding-top: 5rem;
     align-items: center;
     justify-content: center;
     overflow: hidden;
