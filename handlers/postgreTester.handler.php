@@ -24,14 +24,16 @@ $pdo = new PDO($conn_string2, $dbConfig['pgUser'], $dbConfig['pgPassword'], [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         ]);
 
+$files = ['/database/users.model.sql', '/database/users_messages.model.sql'];
 
-
-$sql = file_get_contents(BASE_PATH . '/database/users.model.sql');
-try {
-    $pdo->exec($sql);
-    echo "✅ SQL file executed successfully!";
-} catch (PDOException $e) {
-    echo "❌ SQL error: " . $e->getMessage();
+foreach ($files as $file) {
+    $sql = file_get_contents(BASE_PATH . $file);
+    try {
+        $pdo->exec($sql);
+        echo "✅ SQL file $file executed successfully!<br>";
+    } catch (PDOException $e) {
+        echo "❌ SQL error in $file: " . $e->getMessage() . "<br>";
+    }
 }
 
 $stmt = $pdo->query("SELECT * FROM users");
@@ -48,19 +50,19 @@ foreach ($users as $user) {
     echo "---------------------------\n";
 }
 
-// $stmt = $pdo->query("SELECT * FROM users_messages");
+$stmt = $pdo->query("SELECT * FROM users_messages");
 
-// $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// foreach ($users as $user) {
-//     echo "---------------------------<br>";
-//     echo "User ID: " . $user['id'] . "<br>";
-//     echo "Username: " . $user['username'] . "<br>";
-//     echo "First Name: " . $user['name'] . "<br>";
-//     echo "Last Name: " . $user['email'] . "<br>";
-//     echo "Role: " . $user['message'] . "<br>";
-//     echo "---------------------------<br>";
-// }
+foreach ($users as $user) {
+    echo "---------------------------<br>";
+    echo "User ID: " . $user['id'] . "<br>";
+    echo "Username: " . $user['username'] . "<br>";
+    echo "First Name: " . $user['name'] . "<br>";
+    echo "Last Name: " . $user['email'] . "<br>";
+    echo "Message: " . $user['message'] . "<br>";
+    echo "---------------------------<br>";
+}
 
     pg_close($dbconn);
 }
