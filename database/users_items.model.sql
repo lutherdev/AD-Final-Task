@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS user_avail (
+CREATE TABLE IF NOT EXISTS users_items (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL,
     weekday SMALLINT NOT NULL CHECK (weekday BETWEEN 0 AND 6),
